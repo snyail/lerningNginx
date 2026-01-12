@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  linux:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+    container_name: linux-study
+    tty: true
+    stdin_open: true
