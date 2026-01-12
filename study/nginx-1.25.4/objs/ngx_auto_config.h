@@ -1,4 +1,4 @@
-#define NGX_CONFIGURE " --prefix=/usr/local/nginx --sbin-path=/usr/sbin/nginx"
+#define NGX_CONFIGURE " --prefix=/home/study/nginx --sbin-path=/usr/sbin/nginx"
 
 #ifndef NGX_COMPILER
 #define NGX_COMPILER  "gcc 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04.2) "
@@ -439,7 +439,7 @@
 
 
 #ifndef NGX_PREFIX
-#define NGX_PREFIX  "/usr/local/nginx/"
+#define NGX_PREFIX  "/home/study/nginx/"
 #endif
 
 

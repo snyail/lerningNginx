@@ -18,10 +18,10 @@ modules:
 upgrade:
 	/usr/sbin/nginx -t
 
-	kill -USR2 `cat /usr/local/nginx/logs/nginx.pid`
+	kill -USR2 `cat /home/study/nginx/logs/nginx.pid`
 	sleep 1
-	test -f /usr/local/nginx/logs/nginx.pid.oldbin
+	test -f /home/study/nginx/logs/nginx.pid.oldbin
 
-	kill -QUIT `cat /usr/local/nginx/logs/nginx.pid.oldbin`
+	kill -QUIT `cat /home/study/nginx/logs/nginx.pid.oldbin`
 
 .PHONY:	build install modules upgrade
