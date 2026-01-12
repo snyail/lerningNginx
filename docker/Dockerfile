@@ -31,6 +31,7 @@ RUN cd /home/study
 RUN ./configure --prefix=/usr/local/nginx --sbin-path=/usr/sbin/nginx
 RUN make
 RUN sudo make install
+RUN sudo nginx
 
 # コンテナ起動時に bash
 CMD ["bash"]
