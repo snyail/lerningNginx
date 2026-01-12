@@ -20,9 +20,17 @@ RUN apt-get update && apt-get install -y \
  && rm -rf /var/lib/apt/lists/*
 
 # 上に混ぜれるなら混ぜて
- RUN apt update
+RUN apt update
 
- RUN apt install -y iproute2
+RUN apt install -y iproute2
+
+WORKDIR /home/study/nginx-1.25.4
+
+COPY ../study/nginx-1.25.4 /home/study/nginx-1.25.4
+RUN cd /home/study
+RUN ./configure --prefix=/usr/local/nginx --sbin-path=/usr/sbin/nginx
+RUN make
+RUN sudo make install
 
 # コンテナ起動時に bash
 CMD ["bash"]
