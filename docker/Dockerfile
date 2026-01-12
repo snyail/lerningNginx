@@ -11,7 +11,18 @@ RUN apt-get update && apt-get install -y \
     curl \
     iputils-ping \
     net-tools \
+    wget \
+    build-essential \
+    libpcre3-dev \
+    zlib1g-dev \
+    libssl-dev \
+    tar \
  && rm -rf /var/lib/apt/lists/*
+
+# 上に混ぜれるなら混ぜて
+ RUN apt update
+
+ RUN apt install -y iproute2
 
 # コンテナ起動時に bash
 CMD ["bash"]
